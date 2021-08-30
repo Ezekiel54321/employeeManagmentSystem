@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,17 +9,24 @@
     /hello_blank_fragment" /><ImageView
     android:layout_width="match_parent"
     android:layout_height="160dp"
-    android:background="@drawable/header">
+    android:background="@drawable/header"
+    app:layout_constraintLeft_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 </ImageView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/employeeimg"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:cardCornerRadius="200dp"
+        android:layout_marginLeft="10dp"
         android:foregroundGravity="center"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="110dp"
-        app:cardElevation="10dp">
+        app:cardCornerRadius="200dp"
+        app:cardElevation="10dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/employeename">
 
         <ImageView
             android:layout_width="match_parent"
@@ -30,57 +37,78 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
+        android:id="@+id/profiletext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"
         android:textSize="20dp"
         android:textColor="#fff"
         android:textStyle="bold"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="60dp">
+        android:layout_marginRight="230dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/logintext">
     </TextView>
 
     <TextView
+        android:id="@+id/logintext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log out"
         android:textSize="20dp"
         android:textColor="#fff"
         android:textStyle="bold"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="60dp">
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
     </TextView>
 
     <TextView
+        android:id="@+id/employeename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="User Name"
         android:textSize="24dp"
         android:textColor="#000"
         android:textStyle="bold"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="220dp">
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@id/employeenumb"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/employeeimg">
     </TextView>
 
     <TextView
+        android:id="@+id/employeenumb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="200dp"
         android:text="GT 34562"
-        android:textSize="16dp"
         android:textColor="#000"
+        android:textSize="16dp"
         android:textStyle="normal"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="250dp">
-    </TextView>
+        app:layout_constraintBottom_toTopOf="@id/basicinfodrp"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/employeename"></TextView>
 
     <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/basicinfodrp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="400dp"
-        android:background="@drawable/spinnerdropdown">
+        android:background="@drawable/spinnerdropdown"
+        app:layout_constraintBottom_toTopOf="@id/contactdrp">
     </androidx.appcompat.widget.AppCompatSpinner>
 
     <TextView
+       android:id="@+id/basicinfotext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Basic info"
@@ -88,24 +116,34 @@
         android:textSize="25dp"
         android:textStyle="bold"
         android:layout_marginTop="420dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginRight="265dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@id/contacttext"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
     </TextView>
 
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/ic_user"
-        android:layout_marginTop="420dp"
-        android:layout_marginLeft="140dp">
+        android:layout_marginBottom="39dp"
+        android:layout_marginRight="240dp"
+        app:layout_constraintBottom_toTopOf="@id/contacticon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/basicinfotext">
     </ImageView>
 
     <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/contactdrp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="470dp"
-        android:background="@drawable/spinnerdropdown2">
+        android:background="@drawable/spinnerdropdown2"
+        app:layout_constraintBottom_toTopOf="@id/educationdrp">
     </androidx.appcompat.widget.AppCompatSpinner>
     <TextView
+        android:id="@+id/contacttext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contact info"
@@ -113,25 +151,36 @@
         android:textSize="25dp"
         android:textStyle="bold"
         android:layout_marginTop="485dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginRight="240dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@id/eductiontext"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
     </TextView>
 
     <ImageView
+        android:id="@+id/contacticon"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:background="@drawable/ic_contact_info"
-        android:layout_marginTop="489dp"
-        android:layout_marginLeft="164dp">
+        android:layout_marginBottom="43dp"
+        android:layout_marginRight="210dp"
+        app:layout_constraintBottom_toTopOf="@id/educationicon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/contacttext">
     </ImageView>
 
     <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/educationdrp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="540dp"
-        android:background="@drawable/spinnerdropdown3">
+        android:background="@drawable/spinnerdropdown3"
+        app:layout_constraintBottom_toTopOf="@id/bankdrp">
     </androidx.appcompat.widget.AppCompatSpinner>
 
     <TextView
+        android:id="@+id/eductiontext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Education and skill"
@@ -139,41 +188,60 @@
         android:textSize="25dp"
         android:textStyle="bold"
         android:layout_marginTop="560dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginRight="160dp"
+        android:layout_marginBottom="42dp"
+        app:layout_constraintBottom_toTopOf="@id/banktext"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
     </TextView>
 
     <ImageView
+        android:id="@+id/educationicon"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:background="@drawable/ic_education_skill"
-        android:layout_marginTop="563dp"
-        android:layout_marginLeft="241dp">
+        android:layout_marginBottom="55dp"
+        android:layout_marginRight="140dp"
+        app:layout_constraintBottom_toTopOf="@id/bankicon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/eductiontext">
     </ImageView>
 
     <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/bankdrp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="610dp"
-        android:background="@drawable/spinnerdropdown4">
+        android:background="@drawable/spinnerdropdown4"
+        app:layout_constraintBottom_toBottomOf="parent">
     </androidx.appcompat.widget.AppCompatSpinner>
 
     <TextView
+        android:id="@+id/banktext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bank details"
         android:textColor="#ffff"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:layout_marginTop="625dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="240dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
     </TextView>
 
     <ImageView
+        android:id="@+id/bankicon"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:background="@drawable/ic_bank_details"
-        android:layout_marginTop="629dp"
-        android:layout_marginLeft="171dp">
+        android:layout_marginBottom="18dp"
+        android:layout_marginRight="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/banktext">
     </ImageView>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="414dp"
+        android:layout_height="200dp"
+        android:background="@drawable/header">
+    </ImageView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="368dp"
+        android:layout_height="53dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginLeft="20dp"
+        app:cardElevation="3dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="CLOCK IN"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#3D50C7">
+        </TextView>
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="20dp"
+            android:text="Mon 9th August, 2021"
+            android:fontFamily="sans-serif-black"
+            android:textStyle="normal"
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="19dp"
+            android:textColor="#6C6C6C">
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:background="@drawable/ic_notificationbell"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="104dp"
+        android:layout_marginLeft="368dp"
+        android:layout_marginRight="26dp">
+    </ImageView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="60dp"
+        android:layout_marginRight="350dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/ic_android_black_24dp">
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="129dp"
+        android:layout_height="39dp"
+        android:text="Company Name"
+        android:textColor="@color/white"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="72dp"
+        android:textSize="18dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="218dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#F6E9AD">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="24dp"
+                android:paddingTop="24dp"
+                android:paddingRight="223dp"
+                android:text="Hello Wade!"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Godday, hope you has a good night rest"
+                android:textSize="14dp"
+                android:paddingTop="56dp"
+                android:paddingLeft="24dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Your shift starts at 08:00 AM"
+                android:textSize="12dp"
+                android:paddingTop="89dp"
+                android:paddingLeft="24dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Session to duty:"
+                android:textSize="12dp"
+                android:paddingTop="123dp"
+                android:paddingLeft="24dp"
+                android:textColor="#3D50C7">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="262dp"
+                android:paddingTop="125dp"
+                android:text="00:00:00"
+                android:textColor="#3D50C7"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/textView"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="403dp"
+        app:cardElevation="3dp"
+        android:background="#F6F5F5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <ProgressBar
+                android:id="@+id/progress_circular1"
+                android:layout_marginLeft="9dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/circularbar"
+                android:progress="70">
+            </ProgressBar>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_alignEnd="@+id/progress_circular1"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="20dp"
+                android:paddingLeft="11dp"
+                android:text="75"
+                android:textSize="30dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ProgressBar
+                android:id="@+id/progress_circular2"
+                android:layout_marginLeft="140dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/circularbar2"
+                android:progress="70">
+            </ProgressBar>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_alignStart="@+id/progress_circular2"
+                android:layout_alignEnd="@+id/progress_circular2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="162dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="75"
+                android:textSize="30dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <ProgressBar
+                android:id="@+id/progress_circular3"
+                android:layout_marginLeft="270dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/circularbar2"
+                android:progress="70">
+            </ProgressBar>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_alignStart="@+id/progress_circular3"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="23dp"
+                android:layout_marginLeft="293dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="17dp"
+                android:paddingTop="3dp"
+                android:text="75"
+                android:textSize="30dp"
+                android:textStyle="bold">
+
+            </TextView>
+            
+        </RelativeLayout>
+        
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="Attendance"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginLeft="22dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="Task"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginLeft="170dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="KPI"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginLeft="300dp">
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="362dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="510dp"
+        android:layout_marginLeft="24dp"
+        app:cardCornerRadius="6dp"
+        android:elevation="3dp"
+        app:cardBackgroundColor="#F6F5F5"
+        android:background="#000000">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:rowCount="2"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:background="@drawable/ic_note"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="51dp"
+                    android:layout_height="30dp"
+                    android:text="Tasks"
+                    android:textStyle="bold"
+                    android:textSize="19dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="50dp">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/ic_mail"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:text="Send mail"
+                    android:textStyle="bold"
+                    android:textSize="19dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="34dp">
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:text="Request"
+                    android:textStyle="bold"
+                    android:textSize="19dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="34dp">
+
+                </TextView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="40dp">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:text="Suggestion Box"
+                    android:textStyle="bold"
+                    android:textSize="19dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="9dp">
+
+                </TextView>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </GridLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+</RelativeLayout>
